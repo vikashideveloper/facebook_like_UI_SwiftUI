@@ -9,6 +9,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    init() {
+            // To remove only extra separators below the list:
+            UITableView.appearance().tableFooterView = UIView()
+
+            // To remove all separators including the actual ones:
+            UITableView.appearance().separatorStyle = .none
+
+    }
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
@@ -16,21 +25,13 @@ struct ContentView: View {
                     .padding(.top, 8)
 
                 List {
+                    postCreateNavigationHeaderView()
+                    .background(Color.white)
 
                     Section {
-                        postCreateNavigationHeaderView()
-                        .background(Color.white)
-
-                    }
-                    
-
-                    Section {
-                        FBStatusView()
+                        FBStoryListView()
                         FBPostView()
-                        FBPostView()
-                        FBPostView()
-                        FBPostView()
-                        FBPostView()
+                        FBStoryListView()
                         FBPostView()
 
                     }

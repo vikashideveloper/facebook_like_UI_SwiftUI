@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13861B072396D7BD00667B52 /* FBMainTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13861B062396D7BD00667B52 /* FBMainTabsView.swift */; };
 		13C1A2A4236F0948004B52AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C1A2A3236F0948004B52AF /* AppDelegate.swift */; };
 		13C1A2A6236F0948004B52AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C1A2A5236F0948004B52AF /* SceneDelegate.swift */; };
 		13C1A2A8236F0948004B52AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C1A2A7236F0948004B52AF /* ContentView.swift */; };
@@ -14,10 +15,11 @@
 		13C1A2AD236F094A004B52AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13C1A2AC236F094A004B52AF /* Preview Assets.xcassets */; };
 		13C1A2B0236F094A004B52AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13C1A2AE236F094A004B52AF /* LaunchScreen.storyboard */; };
 		13E461E32393E7CD00B8E2D2 /* FBPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E461E22393E7CD00B8E2D2 /* FBPostView.swift */; };
-		13E461E523942BDC00B8E2D2 /* FBStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E461E423942BDC00B8E2D2 /* FBStatusView.swift */; };
+		13E461E523942BDC00B8E2D2 /* FBStoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E461E423942BDC00B8E2D2 /* FBStoryListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13861B062396D7BD00667B52 /* FBMainTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBMainTabsView.swift; sourceTree = "<group>"; };
 		13C1A2A0236F0948004B52AF /* FacebookUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C1A2A3236F0948004B52AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13C1A2A5236F0948004B52AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +29,7 @@
 		13C1A2AF236F094A004B52AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13C1A2B1236F094A004B52AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13E461E22393E7CD00B8E2D2 /* FBPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBPostView.swift; sourceTree = "<group>"; };
-		13E461E423942BDC00B8E2D2 /* FBStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBStatusView.swift; sourceTree = "<group>"; };
+		13E461E423942BDC00B8E2D2 /* FBStoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBStoryListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +70,8 @@
 				13C1A2B1236F094A004B52AF /* Info.plist */,
 				13C1A2AB236F094A004B52AF /* Preview Content */,
 				13E461E22393E7CD00B8E2D2 /* FBPostView.swift */,
-				13E461E423942BDC00B8E2D2 /* FBStatusView.swift */,
+				13E461E423942BDC00B8E2D2 /* FBStoryListView.swift */,
+				13861B062396D7BD00667B52 /* FBMainTabsView.swift */,
 			);
 			path = FacebookUIDemo;
 			sourceTree = "<group>";
@@ -153,9 +156,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				13E461E32393E7CD00B8E2D2 /* FBPostView.swift in Sources */,
+				13861B072396D7BD00667B52 /* FBMainTabsView.swift in Sources */,
 				13C1A2A4236F0948004B52AF /* AppDelegate.swift in Sources */,
 				13C1A2A6236F0948004B52AF /* SceneDelegate.swift in Sources */,
-				13E461E523942BDC00B8E2D2 /* FBStatusView.swift in Sources */,
+				13E461E523942BDC00B8E2D2 /* FBStoryListView.swift in Sources */,
 				13C1A2A8236F0948004B52AF /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
