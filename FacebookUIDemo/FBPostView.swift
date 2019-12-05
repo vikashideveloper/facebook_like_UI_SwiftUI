@@ -10,20 +10,23 @@ import SwiftUI
 
 
 struct FBPostUserHeaderView: View {
+    var post: FBPost
+    
     var body: some View {
         HStack {
             
-            Image( "profilePick")
+            Image( post.userPhoto)
                 .resizable()
                 .frame(width: 40, height: 40)
                 .cornerRadius(20)
-            
+                .aspectRatio(contentMode: .fit)
+
             VStack(alignment: .leading) {
-                Text("Vikash Kumar")
+                Text(post.username)
                     .fontWeight(.bold)
                     .font(.system(size: 16))
                 
-                Text("15 mins")
+                Text(post.time)
                     .font(.system(size: 13))
                     .foregroundColor(Color.gray)
             }
@@ -33,29 +36,32 @@ struct FBPostUserHeaderView: View {
     }
 }
 
-struct FBPostUserHeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        FBPostUserHeaderView()
-    }
-}
+//struct FBPostUserHeaderView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FBPostUserHeaderView()
+//    }
+//}
 
 struct FBPostView: View {
+    var post: FBPost
+    
     var body: some View {
         VStack(alignment: .leading) {
             
             VStack(alignment: .leading) {
-                FBPostUserHeaderView()
+                FBPostUserHeaderView(post: post)
                 .frame(height: 40)
 
-                Text("That draws all five shapes: two at 200x200 and three at 100x50. However, because the drawing behavior of the shapes is different you’ll see all five shapes visible in the output. That draws all five shapes: two at 200x200 and three at 100x50. However, because the drawing behavior of the shapes is different you’ll see all five shapes visible in the output.")
+                Text(post.text)
                     .font(.system(size: 14))
             }
             .padding(.init(top: 8, leading: 8, bottom: 0, trailing: 8))
             
             VStack {
 
-            FBPostImageView()
-            likeCommentCountsRow()
+            FBPostImageView(post: post)
+                
+                likeCommentCountsRow()
             }
             
             Divider()
@@ -83,7 +89,7 @@ struct FBPostView: View {
                     .font(Font.system(size: 14))
                     .foregroundColor(Color.gray)
 
-                Text("125")
+                Text("\(post.likeCount)")
                     .font(Font.system(size: 14))
                     .foregroundColor(Color.gray)
 
@@ -92,11 +98,11 @@ struct FBPostView: View {
             Spacer()
             
             HStack {
-                Text("125 comments")
+                Text("\(post.commentcount) comments")
                     .font(Font.system(size: 14))
                     .foregroundColor(Color.gray)
 
-                Text("100 shares")
+                Text("\(post.shareCount) shares")
                     .font(Font.system(size: 14))
                     .foregroundColor(Color.gray)
             }
@@ -157,25 +163,26 @@ struct FBPostView: View {
 
 
 
-struct FBPostView_Previews: PreviewProvider {
-    static var previews: some View {
-        FBPostView()
-    }
-}
-
+//struct FBPostView_Previews: PreviewProvider {
+//    static var previews: some View {
+////        FBPostView()
+//    }
+//}
+//
 
 struct FBPostImageView: View {
+    var post: FBPost
     
     var images = [String]()
     
     var body: some View {
         HStack {
             if images.count == 1 {
-                Image( "profilePick")
+                Image( post.image)
                     .resizable()
                     .frame(height: 200)
             } else {
-                Image( "profilePick")
+                Image(post.image)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(height: 200)
@@ -185,3 +192,20 @@ struct FBPostImageView: View {
         }
     }
 }
+
+
+
+
+struct FBPost: Identifiable {
+    var id = 0
+    var username = ""
+    var userPhoto = ""
+    var time = ""
+    var text = ""
+    var image = ""
+    var likeCount = 0
+    var commentcount = 0
+    var shareCount = 0
+}
+
+

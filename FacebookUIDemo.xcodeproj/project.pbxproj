@@ -43,6 +43,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13608481239975FC009E3B85 /* photos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = photos;
+			sourceTree = "<group>";
+		};
 		13C1A297236F0948004B52AF = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +69,7 @@
 		13C1A2A2236F0948004B52AF /* FacebookUIDemo */ = {
 			isa = PBXGroup;
 			children = (
+				13608481239975FC009E3B85 /* photos */,
 				13C1A2A3236F0948004B52AF /* AppDelegate.swift */,
 				13C1A2A5236F0948004B52AF /* SceneDelegate.swift */,
 				13C1A2A7236F0948004B52AF /* ContentView.swift */,
