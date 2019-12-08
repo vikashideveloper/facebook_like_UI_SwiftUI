@@ -50,33 +50,37 @@ struct FBPostView: View {
             
             VStack(alignment: .leading) {
                 FBPostUserHeaderView(post: post)
-                .frame(height: 40)
+                    .frame(height: 40)
 
                 Text(post.text)
+                    .lineLimit(nil)
                     .font(.system(size: 14))
             }
             .padding(.init(top: 8, leading: 8, bottom: 0, trailing: 8))
             
-            VStack {
+            Spacer()
 
-            FBPostImageView(post: post)
-                
-                likeCommentCountsRow()
+            if !post.image.isEmpty {
+                FBPostImageView(post: post)
+                    .frame(height: 200)
             }
+
+            likeCommentCountsRow()
+                .frame(height: 14)
             
             Divider()
                 .frame(height: 0.5)
                 .padding([.leading, .trailing], 12)
 
-             VStack(spacing: 0) {
-                 
-                 likeCommentShareActionRow()
-                     .frame(height: 30)
+            VStack(spacing: 0) {
 
-                 Rectangle()
-                     .fill(Color.gray.opacity(0.5))
-                     .frame(height: 8)
-             }
+                likeCommentShareActionRow()
+                
+                Rectangle()
+                    .fill(Color.gray.opacity(0.5))
+                    .frame(height: 8)
+            }
+
         }
         .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
     }
@@ -108,7 +112,9 @@ struct FBPostView: View {
             }
 
         }
+        .frame(height: 30)
         .padding([.leading, .trailing], 8)
+    
     }
     
     func likeCommentShareActionRow() -> some View {

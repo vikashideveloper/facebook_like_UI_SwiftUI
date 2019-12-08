@@ -14,7 +14,13 @@ struct FBStoryListView: View {
         FBStory(id: 1, username: "Vikash Kumar", userphoto: "profilePick", content: "pmmodi"),
         FBStory(id: 2, username: "PV Sindhu", userphoto: "sindhu1", content: "sindhu"),
         FBStory(id: 3, username: "Virat Kohli", userphoto: "kohali1", content: "virat"),
-        FBStory(id: 4, username: "Google Inc.", userphoto: "google", content: "sundar")]
+        FBStory(id: 4, username: "Google Inc.", userphoto: "google", content: "sundar"),
+        FBStory(id: 5, username: "Vikash Kumar", userphoto: "profilePick", content: "pmmodi"),
+        FBStory(id: 6, username: "PV Sindhu", userphoto: "sindhu1", content: "sindhu"),
+        FBStory(id: 7, username: "Virat Kohli", userphoto: "kohali1", content: "virat"),
+        FBStory(id: 8, username: "Google Inc.", userphoto: "google", content: "sundar")
+
+    ]
     
     
     var body: some View {
@@ -54,10 +60,10 @@ struct FBStoryListView: View {
                             }
                             .padding( 8)
 
-
                         }
                     }
-                }.padding ([.leading, .trailing], 8)
+                }
+                .padding ([.leading, .trailing], 8)
             }
             
             Rectangle()
